@@ -1,49 +1,62 @@
-# Compass Digital AI Engineer Take-Home Exercise
+
+# Product Matcher: Automated System for Product List Mapping
 
 ## Overview
-This project aims to automate and optimize the matching process between two product lists for a stakeholder operating convenience-store-like markets. Currently, the manual process of aligning internal product data with new, incoming products from suppliers is slow and inefficient. To address this, we will develop an intelligent, automated system that accurately matches products from both lists.
+**Product Matcher** is an open-source solution designed to automate the mapping process between internal product lists of retailers and external product lists from suppliers. This tool aims to replace the slow and error-prone manual matching process with an intelligent, automated system that ensures accurate and efficient product matching.
 
-## Objective
-The primary objective is to create a solution that matches external products (from suppliers) with internal items (from the stakeholder's existing inventory) based on identical manufacturer, name, and size attributes. The solution must leverage prompt engineering as part of the tech stack to enhance the matching accuracy.
+## Problem Statement
+Retailers and distributors often face challenges in matching new incoming products from suppliers with their existing inventory. This process is typically manual, time-consuming, and prone to errors, especially when dealing with large datasets containing various product attributes. The goal of **Product Matcher** is to automate this matching process by accurately identifying identical products based on manufacturer, name, and size.
 
-### Key Deliverables
-1. **Final Result**:  
-   - A table that displays all external items along with their corresponding mapped internal product. If no match is found, the table should indicate `NULL` for the internal product.
-   
-2. **Presentation**:  
-   - A short, non-technical presentation demonstrating how the system works.
-   - Prepared materials (e.g., Jupyter notebooks) to discuss technical details when required.
+## Features
+- **Automated Matching System**: Automatically match external products from suppliers with internal items based on identical manufacturer, product name, and size.
+- **User-Friendly Interface**: Optional front-end application using tools such as Streamlit or Gradio for ease of use and interaction.
+- **Prompt Engineering**: Utilizes prompt engineering techniques to enhance matching accuracy.
+- **Flexible and Extensible**: Designed to be adaptable to various data formats and can be extended with additional matching rules or machine-learning algorithms.
 
-3. **Bonus (Optional)**:  
-   - Develop a simple front-end application using tools such as Streamlit or Gradio to enhance user interaction.
+## Getting Started
 
-## Evaluation Criteria
-The solution will be evaluated based on:
-- The approach to exploring and understanding the datasets.
-- The thought process behind the chosen solution.
-- The effectiveness and accuracy of the matching system.
-- The clarity and accessibility of the presentation for a non-technical audience.
-- Additional points will be awarded for implementing a user-friendly front-end application.
+### Prerequisites
+- Python 3.8 or later
+- Required Python packages (listed in `requirements.txt`)
 
-## Approach
-1. **Data Exploration**:  
-   - Initial analysis of both datasets to identify patterns, key attributes, and potential challenges in matching.
-   
-2. **Prompt Engineering**:  
-   - Develop a series of prompt engineering techniques to refine the matching process, ensuring exact matches based on manufacturer, name, and size.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/product-matcher.git
+   cd product-matcher
+   ```
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the main script:
+   ```bash
+   python main.py
+   ```
 
-3. **Automated Matching System**:  
-   - Implement an intelligent system using machine learning or rule-based algorithms to match external products with internal items.
-   - Generate a table with results, indicating matches and non-matches (`NULL`).
+## Usage
 
-4. **Front-End Development (Optional)**:  
-   - Build a simple, user-friendly front-end application using a tool like Streamlit or Gradio to allow stakeholders to interact with the matching results.
+1. **Prepare Your Data**:  
+   Ensure you have two CSV files ready: one containing the internal product list and one containing the external product list from suppliers. Place these files in the `data/` directory.
 
-5. **Presentation Preparation**:  
-   - Create a presentation that explains the process and outcome in a format suitable for non-technical stakeholders.
+2. **Run the Matching Script**:  
+   The main script will process both CSV files and generate an output table that includes all external items with their corresponding mapped internal products. If no match is found, the table will indicate `NULL` for the internal product.
+   ```bash
+   python main.py --internal data/internal_products.csv --external data/external_products.csv
+   ```
+
+3. **Review the Results**:  
+   The output will be saved in the `output/` directory. You can review the generated table for matched and unmatched products.
+
+4. **Optional: Launch the Front-End Application**:  
+   To provide a user-friendly interface, you can launch the front-end application:
+   ```bash
+   streamlit run app.py
+   ```
 
 ## Examples of Product Matches
-To clarify the requirements, here are a few examples of correct and incorrect matches:
+
+Here are a few examples to illustrate how **Product Matcher** works:
 
 | External Product Name                    | Internal Product Name                                       | Status       |
 |-------------------------------------------|-------------------------------------------------------------|--------------|
@@ -52,5 +65,19 @@ To clarify the requirements, here are a few examples of correct and incorrect ma
 | Hersheys Almond Milk Choco 1.6 oz         | Hersheys Milk Chocolate with Almonds (1.85oz)               | Wrong Match  |
 | COOKIE PEANUT BUTTER 2OZ                  | Famous Amos Peanut Butter Cookie (2oz)                      | Wrong Match  |
 
-## Conclusion
-This project is a great opportunity to showcase problem-solving skills in the field of data engineering and AI. The focus will be on designing a robust and efficient solution that accurately maps products while demonstrating creativity and technical acumen in the approach taken.
+## Contributing
+We welcome contributions from the community! If you have ideas for new features, bug fixes, or enhancements, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push them to your forked repository.
+4. Submit a pull request with a detailed explanation of your changes.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+If you have any questions or need further assistance, please feel free to open an issue or reach out to us at [your-email@example.com](mailto:your-email@example.com).
+
+## Acknowledgments
+Special thanks to all contributors and the open-source community for their valuable feedback and suggestions in improving this tool.
