@@ -11,13 +11,6 @@ Your stakeholder operates convenience-store-like markets and receives weekly shi
 2. **Presentation**: A short presentation to demonstrate how your system works, targeted towards a non-technical audience.
 3. **Bonus**: Develop a simple front-end app using Streamlit.
 
-## Evaluation Criteria
-- Approach to exploring and understanding the datasets.
-- Thought process behind the solution.
-- Effectiveness and accuracy of the matching system.
-- Clarity and accessibility of the presentation for a non-technical audience.
-- Additional points for implementing a user-friendly front-end application.
-
 ## Setup Instructions
 1. **Install Python**: Ensure Python is installed on your system.
 2. **Create Virtual Environment**: 
